@@ -17,8 +17,8 @@ namespace palindrome
             {
                 if (wordGiven[wordStart] == wordGiven[wordEnd])
                 {
-                    Console.WriteLine(wordArray[wordEnd]);
-                    Console.WriteLine(wordArray[wordStart]);
+                    //Console.WriteLine(wordArray[wordEnd]);
+                    //Console.WriteLine(wordArray[wordStart]);
                     wordEnd--; //moving to the next index in the array
                     wordStart++;
 
