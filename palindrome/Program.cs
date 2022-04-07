@@ -8,6 +8,23 @@ namespace palindrome
         {
             Console.WriteLine("Enter a word and I'll tell your if it's a palindrome.");
             string wordGiven = Console.ReadLine();
+            bool isValid = true;
+
+            do
+                if (String.IsNullOrEmpty(wordGiven))
+
+                {
+                    Console.WriteLine("Please enter a valid word.");
+                    isValid = false;
+                    wordGiven = Console.ReadLine();
+
+                }
+                else
+                {
+                    isValid = true;
+                }
+                while (isValid == false);
+
             char[] wordArray = wordGiven.ToCharArray(); //storing characters of wordGiven into an array
             int wordEnd = wordArray.Length - 1; //grabing length of array for easy index comparision
             int wordStart = 0;
@@ -31,6 +48,8 @@ namespace palindrome
                 }
             }
             while (wordEnd > 1 && palin == true);
+
+
 
             if (palin == true)
             {
