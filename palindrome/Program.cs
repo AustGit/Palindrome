@@ -26,7 +26,7 @@ namespace palindrome
                 while (isValid == false);
 
             char[] wordArray = wordGiven.ToCharArray(); //storing characters of wordGiven into an array
-            int wordEnd = wordArray.Length - 1; //grabing length of array for easy index comparision
+            int wordEnd = wordArray.Length -1; //grabing length of array for easy index comparision
             int wordStart = 0;
             bool palin = true;
 
@@ -34,8 +34,8 @@ namespace palindrome
             {
                 if (wordGiven[wordStart] == wordGiven[wordEnd])
                 {
-                    //Console.WriteLine(wordArray[wordEnd]);
-                    //Console.WriteLine(wordArray[wordStart]);
+                    Console.WriteLine(wordArray[wordEnd]);
+                    Console.WriteLine(wordArray[wordStart]);
                     wordEnd--; //moving to the next index in the array
                     wordStart++;
 
@@ -47,7 +47,7 @@ namespace palindrome
                     palin = false;
                 }
             }
-            while (wordEnd > 1 && palin == true);
+            while (wordEnd > wordArray.Length / 2  && palin == true);
 
 
 
